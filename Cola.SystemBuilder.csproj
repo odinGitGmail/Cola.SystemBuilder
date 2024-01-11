@@ -19,10 +19,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <None Update="readme.md">
-        <Pack>true</Pack>
-        <PackagePath>\</PackagePath>
-      </None>
+        <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
     </ItemGroup>
 
     <ItemGroup>
@@ -33,6 +31,10 @@
     </ItemGroup>
     <ItemGroup>
         <None Include="readme.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\Cola.Core\Cola.Core.csproj" />
     </ItemGroup>
 
 </Project>
