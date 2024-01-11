@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:odinGitGmail/Cola.Core.git"
+    "url": "git@github.com:odinGitGmail/Cola.SystemBuilder.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/odinGitGmail/Cola.Core/issues"
+    "url": "https://github.com/odinGitGmail/Cola.SystemBuilder/issues"
   },
-  "homepage": "https://github.com/odinGitGmail/Cola.Core#readme",
+  "homepage": "https://github.com/odinGitGmail/Cola.SystemBuilder#readme",
   "devDependencies": {
     "better-than-before": "^1.0.0",
     "chai": "^4.2.0",

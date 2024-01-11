@@ -4,6 +4,18 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Version>1.0.1</Version>
+        <Title>Cola.SystemBuilder</Title>
+        <Authors>OdinSam</Authors>
+        <Description>Cola.SystemBuilder 框架核心组件</Description>
+        <Copyright>copyRight © 2023 OdinSam</Copyright>
+        <PackageProjectUrl>https://github.com/odinGitGmail/Cola.SystemBuilder</PackageProjectUrl>
+        <PackageIcon>icon.png</PackageIcon>
+        <RepositoryUrl>https://github.com/odinGitGmail/Cola.SystemBuilder</RepositoryUrl>
+        <PackageTags>Cola.SystemBuilder;net core</PackageTags>
+        <AssemblyVersion>1.0.1</AssemblyVersion>
+        <FileVersion>1.0.1</FileVersion>
+        <PackageReadmeFile>./readme.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
