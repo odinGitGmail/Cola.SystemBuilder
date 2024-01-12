@@ -1,6 +1,6 @@
 {
-  "name": "cola.core",
-  "version": "1.0.3",
+  "name": "cola.systembuilder",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
