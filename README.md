@@ -5,6 +5,27 @@
 #### Cors跨域配置
 
 ```json
+{
+  "ColaCors": {
+    "Cors": [
+      {
+        "CorsName": "LimitRequests",
+        // 支持多个域名端口，注意端口号后不要带/斜杆：比如localhost:8000/，是错的。http://127.0.0.1:1818 和 http://localhost:1818 是不一样的，需要写两个
+        "AllowOriginsIp": "http://127.0.0.1:2364,http://localhost:2364,http://localhost:8080,http://localhost:8021,http://localhost:1818",
+        "AllowHeaders": ""
+      }
+    ]
+  }
+}
+```
 
+#### Cors 调用
+```csharp
+builder.Services.AddColaCors(config,"LimitRequests");
+//  注意顺序
+app.UseHttpsRedirection();
+app.UseStaticFiles();
+app.UseRouting();
+app.UseCors();
 ```
 
