@@ -9,7 +9,7 @@ namespace Cola.SystemBuilder;
 
 public static class ColaCorsExtensions
 {
-    public static void AddColaCors(this IServiceCollection services, IConfiguration configuration, string corsName)
+    public static void AddColaCors(this IServiceCollection services, IConfiguration configuration)
     {
         if (services == null)
         {
