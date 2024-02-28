@@ -19,28 +19,21 @@ public static class ColaCorsExtensions
         var colaCorsOption = configuration.GetColaSection<ColaCorsOption>(SystemConstant.CONSTANT_COLACORS_SECTION);
         services.AddCors(c =>
         {
-            foreach (var corsOption in colaCorsOption.Cors)
+            foreach (var corsOption in colaCorsOption.Cors!)
             {
                 c.AddPolicy(corsOption.CorsName, policy =>
                 {
                     if (!corsOption.AllowOriginsIp.StringIsNotNullOrEmpty())
                     {
                         policy = policy
-                            .WithOrigins(corsOption.AllowOriginsIp.Split(','));
+                            .WithOrigins(corsOption.AllowOriginsIp!.Split(','));
                     }
                     else
                     {
                         policy = policy.SetIsOriginAllowed(_ => true);
                     }
 
-                    if (!corsOption.AllowHeaders.StringIsNotNullOrEmpty())
-                    {
-                        policy = policy.WithHeaders(corsOption.AllowHeaders.Split(','));
-                    }
-                    else
-                    {
-                        policy = policy.AllowAnyHeader();
-                    }
+                    policy = !corsOption.AllowHeaders.StringIsNotNullOrEmpty() ? policy.WithHeaders(corsOption.AllowHeaders!.Split(',')) : policy.AllowAnyHeader();
 
                     policy.AllowAnyHeader();
                 });
